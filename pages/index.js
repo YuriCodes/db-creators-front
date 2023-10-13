@@ -55,7 +55,7 @@ export default function Home() {
      <ul >
       <h2 className='text-2xl'>Title </h2>
       {creators.map((authors, id) => (
-      <li id="title">{authors.title} < br />
+      <li id="title" key={id}>{authors.title} < br />
       <a id="url" href={authors.url}>{authors.url} </a>
       {/*<button className='p-2 mx-3 rounded-full border-solid border-2' onClick={handleClick}> Copy Title </button> */}
       <hr />
