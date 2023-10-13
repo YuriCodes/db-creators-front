@@ -18,10 +18,20 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--background-end-rgb);
+
+}
+h1, h2, h3{
+  color: green;
+}
+
+a{
+  text-decoration: underline;
+  color: green; 
+}
+#title{
+  padding: 20px;
+}
+hr{
+  height: 24px;
 }
