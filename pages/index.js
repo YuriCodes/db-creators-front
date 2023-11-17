@@ -1,7 +1,8 @@
 
-import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google';
 
-import { SupabaseClient, createClient } from '@supabase/supabase-js'
+import { SupabaseClient, createClient } from '@supabase/supabase-js';
+
 
 
 const supabaseUrl = 'https://fyzmzhlqlrtqkxxeepft.supabase.co'
@@ -50,15 +51,16 @@ export default function Home() {
         </h1>
       </div>
 
-      <section className='grid grid-cols-2 gap-4 p-5 ml-10'>
+      <section>
 
      <ul >
-      <h2 className='text-2xl'>Title </h2>
+
+
       {creators.map((authors, id) => (
-      <li id="title" key={id}>{authors.title} < br />
+      <li id="title" key={id}> {authors.title} < br />
       <a id="url" href={authors.url}>{authors.url} </a>
       {/*<button className='p-2 mx-3 rounded-full border-solid border-2' onClick={handleClick}> Copy Title </button> */}
-      <hr />
+    
       </li> 
       
       ))} 
@@ -66,7 +68,6 @@ export default function Home() {
      </ul>
 
       </section>
-   
     </main>
   )
 }
