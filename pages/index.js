@@ -38,6 +38,18 @@ let { data: creators, error } = await supabase
 
   //   alert('row copied');
   // }
+
+  async function handleClick (e) {
+    let { data: creators, error } = await supabase
+  .from('creators')
+  .select('id', 'title')
+  .order('id', { ascending: true })
+
+  return handleClick; 
+
+   
+
+  }
   
 
 const inter = Inter({ subsets: ['latin'] })
@@ -50,7 +62,10 @@ export default function Home() {
           Community Highlights db
         </h1>
       </div>
-
+        
+      <button className='p-2 mx-3 rounded-full border-solid border-2' 
+      onClick={handleClick}> Ascending </button>   
+      
       <section>
 
      <ul >
@@ -59,7 +74,9 @@ export default function Home() {
       {creators.map((authors, id) => (
       <li id="title" key={id}> {authors.title} < br />
       <a id="url" href={authors.url}>{authors.url} </a>
-      {/*<button className='p-2 mx-3 rounded-full border-solid border-2' onClick={handleClick}> Copy Title </button> */}
+      <h4>{authors.id}</h4>
+      <hr />
+     
     
       </li> 
       

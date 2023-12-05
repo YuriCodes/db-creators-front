@@ -22,7 +22,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(76,195,138,1) 38%, rgba(25,141,146,1) 100%);
+  background:white;
   text-align: center;
   font-family: 'Roboto', sans-serif;
 
@@ -52,21 +52,12 @@ a{
 
 
 
-section ul{
-  display: grid;
-  grid-template-columns: 500px 500px 500px;
-  padding-left: 5%;
+section{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: left;
   
 }
 
-li{
-  border: 2px solid rgb(158, 153, 153);
-  box-shadow: 2px 3px 5px 2px rgba(252, 252, 252, 0.407);
-  border-radius: 12px;
-  margin: 15px;   
-  overflow: hidden;
-  max-width: 100%;
-  text-overflow: ellipsis;
-  background-color: rgba(255, 255, 255, 0.884);
 
-}
